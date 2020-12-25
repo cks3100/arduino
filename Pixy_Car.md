@@ -134,11 +134,6 @@ void loop() {
       translateLoop.m_command = MAX_TRANSLATE_VELOCITY;
 
     // 회전속도 기준 바퀴속도 
-    // left right 바퀴 입력값
-    //left = -rotateLoop.m_command + translateLoop.m_command;
-    //right = rotateLoop.m_command + translateLoop.m_command;
-    //Serial.println(rotateLoop.m_command);    //rotateloop test 좌 우
-    //Serial.println(translateLoop.m_command);   //translateloop test 위 아래
     left = -rotateLoop.m_command;  // 좌
     right = rotateLoop.m_command;  // 우
 
