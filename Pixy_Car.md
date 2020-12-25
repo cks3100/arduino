@@ -98,7 +98,7 @@ void loop() {
   Block *block=NULL;
   pixy.ccc.getBlocks();
 
-  if (index==-1) // 물체를 찾는중
+  if (index==-1) // 물체를 찾기
   {
     Serial.println("Searching for block...");
     index = acquireBlock();
@@ -115,7 +115,7 @@ void loop() {
     panOffset = (int32_t)pixy.frameWidth/2 - (int32_t)block->m_x;
     tiltOffset = (int32_t)block->m_y - (int32_t)pixy.frameHeight/2;  
 
-    // 서보모터값 업데이트
+    // 서보모터값
     panLoop.update(panOffset);
     tiltLoop.update(tiltOffset);
 
