@@ -23,4 +23,4 @@ void loop() {
     }
     Serial.println(cds);
 }
-...
+
