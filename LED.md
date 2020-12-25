@@ -2,16 +2,14 @@
 const int LED = 9;
 int cds = A0;
 void setup() {
-  // put your setup code here, to run once:
   Serial.begin(9600);
   pinMode(LED, OUTPUT);
   pinMode(cds, INPUT);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-
   cds = analogRead(A0);
+  
   if(cds > 150) {
     analogWrite(LED, 10);
   }
@@ -23,4 +21,3 @@ void loop() {
     }
     Serial.println(cds);
 }
-
